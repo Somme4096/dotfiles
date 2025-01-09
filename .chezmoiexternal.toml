@@ -11,7 +11,4 @@
   exact = true
   refreshPeriod = "168h"
 
-[".config/nvim"]
-    type = "git-repo"
-    url = "https://github.com/Somme4096/nvim.git"
-    refreshPeriod = "168h"
+
