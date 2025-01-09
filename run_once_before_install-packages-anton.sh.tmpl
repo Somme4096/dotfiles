@@ -2,10 +2,10 @@
 {{   if eq .chezmoi.osRelease.id "arch"  -}}
 
 #!/bin/bash
-# pacman -S --needed --noconfirm git base-devel
-# git clone https://aur.archlinux.org/yay.git ~/clone/
-# cd ~/clone/yay
-# makepkg -si
+sudo pacman -S --needed --noconfirm git base-devel
+git clone https://aur.archlinux.org/yay.git ~/clone/yay
+cd ~/clone/yay
+makepkg -si
 
 yay -Syu --noconfirm --needed - < /dev/stdin <<EOF
 {{ range .packages.arch.cli -}}
@@ -14,3 +14,9 @@ yay -Syu --noconfirm --needed - < /dev/stdin <<EOF
 EOF
 {{   end }}
 {{ end }}
+
+# mise activation
+chmod +x ~/.local/bin/mise
+
+# auth github
+gh auto login
