@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "linux" -}}
+{{   if eq .chezmoi.osRelease.id "arch"  -}}
+
+#!/bin/bash
+# pacman -S --needed --noconfirm git base-devel
+# git clone https://aur.archlinux.org/yay.git ~/clone/
+# cd ~/clone/yay
+# makepkg -si
+
+yay -Syu --noconfirm --needed - < /dev/stdin <<EOF
+{{ range .packages.arch.cli -}}
+{{ . }}
+{{ end -}}
+EOF
+{{   end }}
+{{ end }}

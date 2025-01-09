@@ -1,0 +1,21 @@
+packages:
+  arch:
+    cli:
+    - 'fish'
+    - 'yazi'
+    - 'kubectl'
+    - 'kubectx'
+    - 'neovim'
+    - 'nushell'
+    - 'fish'
+    - 'starship'
+    - 'tmux'
+    - 'github-cli'
+    - 'gitmux-bin'
+    - 'lazygit'
+    - 'ripgrep'
+    - 'fzf'
+    - 'bat'
+    - 'eza'
+    extra:
+    - 'neovide'
