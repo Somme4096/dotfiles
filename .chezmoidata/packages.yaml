@@ -1,5 +1,7 @@
 packages:
   arch:
+    core:
+    - 'cmake'
     cli:
     - 'fish'
     - 'yazi'

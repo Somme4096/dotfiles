@@ -8,6 +8,9 @@ cd ~/clone/yay
 makepkg -si
 
 yay -Syu --noconfirm --needed - < /dev/stdin <<EOF
+{{ range .packages.arch.core -}}
+{{ . }}
+{{ end -}}
 {{ range .packages.arch.cli -}}
 {{ . }}
 {{ end -}}
