@@ -10,7 +10,7 @@ animation_speed = 12
 [padding]
 top = 5
 bottom = 5
-left = 10
+left = 2
 right = 10
 
 [decorations]

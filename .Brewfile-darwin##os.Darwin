@@ -17,6 +17,7 @@ cask "neovide-app"
 cask "obsidian"
 cask "tailscale-app"
 cask "zen"
+cask "zed"
 # Pear Desktop — YouTube Music desktop client (replaces com.github.th_ch.youtube_music flatpak)
 cask "pear-devs/pear/pear-desktop"
 
