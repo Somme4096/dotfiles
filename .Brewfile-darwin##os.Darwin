@@ -28,3 +28,4 @@ cask "karabiner-elements" # keybinding manager
 
 # Fonts
 cask "font-commit-mono-nerd-font"
+cask "font-iosevka-term-nerd-font"
