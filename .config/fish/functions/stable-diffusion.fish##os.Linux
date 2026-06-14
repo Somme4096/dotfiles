@@ -1,0 +1,4 @@
+function stable-diffusion --description "Launch ComfyUI server in distrobox"
+    cd /var/home/stable-diffusion/ComfyUI
+    distrobox enter stable-diffusion -- bash -c "source .venv/bin/activate && python main.py --enable-manager --fp32-vae --listen 0.0.0.0"
+end

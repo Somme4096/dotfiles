@@ -24,8 +24,6 @@ brew "pv"
 brew "rclone"
 # CMake build system
 brew "cmake"
-# Friendly interactive shell
-brew "fish"
 # Minimal, blazing fast terminal prompt
 brew "starship"
 # Terminal multiplexer

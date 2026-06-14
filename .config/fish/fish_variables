@@ -1,3 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
+SETUVAR _tide_left_items:\x1d
+SETUVAR _tide_right_items:\x1d

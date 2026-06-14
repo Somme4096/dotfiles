@@ -1,5 +1,7 @@
 # Mac App Store CLI
 brew "mas"
+# Friendly Interactive SHell (installed by rpm-ostree on Silverblue)
+brew "fish"
 
 # Mac GUI applications (Homebrew Cask): Inhereted from Silverblue
 cask "anki"
