@@ -2,6 +2,8 @@
 brew "yadm"
 # GitHub command-line tool
 brew "gh"
+# Argon2 CLI (For password-has calculation)
+brew "argon2"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Next-gen compiler infrastructure
@@ -38,35 +40,6 @@ brew "bat"
 brew "eza"
 # opencode
 brew "opencode"
-# Mac App Store CLI
-brew "mas"
-
-# Mac GUI applications (Homebrew Cask): Inhereted from Silverblue
-cask "anki"
-cask "aquaskk"
-cask "coteditor"
-# cask "cmux"
-cask "google-chrome"
-cask "ghostty"
-cask "foobar2000"
-# cask "handbrake"
-cask "libreoffice"
-# cask "lm-studio"
-cask "neovide-app"
-cask "obsidian"
-# cask "tolaria"
-cask "tailscale-app"
-cask "zen"
-# Pear Desktop — YouTube Music desktop client (replaces com.github.th_ch.youtube_music flatpak)
-cask "pear-devs/pear/pear-desktop"
-# Mac GUI Applications (original)
-cask "orbstack"
-cask "maccy"
-brew "paneru"
-cask "karabiner-elements" # keybinding manager
-
-# Fonts
-cask "font-commit-mono-nerd-font"
 
 # flatpak
 flatpak "ai.lmstudio.lm-studio"
@@ -133,3 +106,8 @@ flatpak "org.onlyoffice.desktopeditors"
 flatpak "org.prismlauncher.PrismLauncher"
 flatpak "org.upscayl.Upscayl"
 flatpak "org.videolan.VLC"
+
+mac_bundle = File.expand_path("~/.Brewfile-darwin")
+if File.exist?(mac_bundle)
+  instance_eval(File.read(mac_bundle), mac_bundle)
+end

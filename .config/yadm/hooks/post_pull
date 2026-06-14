@@ -1,14 +1,34 @@
 #!/bin/bash
 
-# Check if the current OS is macOS
-if [ "$(uname)" = "Darwin" ]; then
-    echo "MacOS detected. Synchronizing Homebrew packages..."
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    if [ -f "$HOME/.Brewfile" ]; then
-        brew bundle --global install --force --force-cleanup
+OS_TYPE="$(uname)"
+
+if [ "$OS_TYPE" = "Darwin" ]; then
+    echo "macOS detected. Validating Brewfiles..."
+    if [ -f "$HOME/.Brewfile" ] && [ -f "$HOME/.Brewfile-darwin" ]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+        brew bundle --global install --force --cleanup
     else
-        echo "No .Brewfile found in $HOME."
+        echo "Missing ~/.Brewfile or ~/.Brewfile-darwin on Mac. Skipping sync."
     fi
+
+elif [ "$OS_TYPE" = "Linux" ]; then
+    echo "Linux detected. Validating Brewfile..."
+    if [ -f "$HOME/.Brewfile" ]; then
+        # Check if Linuxbrew is actually installed on this system/container
+        if command -v brew &> /dev/null; then
+            echo "~/.Brewfile found. Syncing Linuxbrew..."
+            brew bundle --global install --force --cleanup
+        elif [ -d /var/home/linuxbrew/.linuxbrew ]; then
+            echo "~/.Brewfile found. Syncing Linuxbrew..."
+            eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+            brew bundle --global install --force --cleanup
+        else
+            echo "ℹ️ ~/.Brewfile exists, but Homebrew/Linuxbrew is not installed on this machine. Skipping sync."
+        fi
+    else
+        echo "~/.Brewfile not found on Linux. Skipping sync."
+    fi
+
 else
-    echo "Linux detected. Skipping Homebrew sync."
+    echo "Unknown OS ($OS_TYPE). Skipping Homebrew sync."
 fi
