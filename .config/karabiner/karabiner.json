@@ -1,0 +1,67 @@
+{
+    "machine_specific": { "krbn-4ebaa42e-401c-4fcd-ab80-765fb0b034d1": { "external_editor_path": "/Applications/CotEditor.app" } },
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "My Custom Linux-Style Shortcuts with Spotlight Fix",
+                        "manipulators": [
+                            {
+                                "description": "Tap Left Command for Mission Control, Hold for Normal Shortcuts",
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Launch Ghostty via Command + Enter",
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": { "mandatory": ["left_control"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Ghostty'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Remap Shift + Space to trigger default Spotlight (Command + Space)",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": ["left_shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f4" },
+                    "to": [{ "apple_vendor_keyboard_key_code": "launchpad" }]
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}
