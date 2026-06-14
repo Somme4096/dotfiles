@@ -1,0 +1,71 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
+  "context_servers": {
+    "Astro docs": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.docs.astro.build/mcp"],
+    },
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "agent": {
+    "dock": "right",
+    "profiles": {
+      "edit": {
+        "default_model": {
+          "provider": "copilot_chat",
+          "model": "claude-sonnet-4",
+        },
+        "name": "Edit",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      },
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
+    },
+    "model_parameters": [],
+  },
+  "terminal": {
+    "font_family": "IosevkaTerm Nerd Font Propo",
+  },
+  "use_smartcase_search": true,
+  "vim_mode": true,
+  "ui_font_family": "Noto Sans Mono CJK JP",
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": ".ZedMono",
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 14.0,
+  "buffer_font_size": 12.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+}

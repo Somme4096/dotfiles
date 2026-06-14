@@ -1,0 +1,72 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "!((Editor && (mode == single_line || vim_mode == insert)) || Terminal || search)",
+    "use_key_equivalents": true,
+    "bindings": {
+      "shift-h": "pane::GoBack",
+      "shift-l": "pane::GoForward",
+      "space w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  // Vim mode Leader key configuration
+  {
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+
+      "space o": "outline::Toggle",
+      "space g b": "git::Branch",
+      "space t": "terminal_panel::ToggleFocus",
+      "space g g": "git_panel::ToggleFocus",
+      "space /": "pane::DeploySearch",
+      "escape escape": "workspace::Save",
+      "shift-r": "vim::Redo",
+      // "space h": "editor::ToggleInlayHints",
+      "space e": "pane::RevealInProjectPanel",
+      "ctrl-a": "editor::ToggleCodeActions",
+      "] f": "vim::NextMethodStart",
+      "[ f": "vim::PreviousMethodStart"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "shift-h": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "shift-h": "vim::WindowTop"
+    }
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "shift-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "shift-l": "vim::WindowBottom"
+    }
+  }
+]
