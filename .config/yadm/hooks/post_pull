@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check if the current OS is macOS
+if [ "$(uname)" = "Darwin" ]; then
+    echo "MacOS detected. Synchronizing Homebrew packages..."
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    if [ -f "$HOME/.Brewfile" ]; then
+        brew bundle --global install --force --force-cleanup
+    else
+        echo "No .Brewfile found in $HOME."
+    fi
+else
+    echo "Linux detected. Skipping Homebrew sync."
+fi

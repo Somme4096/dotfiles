@@ -68,7 +68,7 @@ cask "karabiner-elements" # keybinding manager
 # Fonts
 cask "font-commit-mono-nerd-font"
 
-uv "rsa"
+# flatpak
 flatpak "ai.lmstudio.lm-studio"
 flatpak "app.drey.EarTag"
 flatpak "app.drey.Warp"
