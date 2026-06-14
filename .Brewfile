@@ -109,3 +109,8 @@ mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
   instance_eval(File.read(mac_bundle), mac_bundle)
 end
+
+linux.bundle = File.expand_path("~/.Brewfile-linux")
+if File.exist?(linux_bundle)
+  instance_eval(File.read(linux_bundle), linux_bundle)
+end
