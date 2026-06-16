@@ -8,6 +8,8 @@ brew "argon2"
 brew "lazygit"
 # Next-gen compiler infrastructure
 brew "llvm"
+# devcontainer CLI - a reference implemention
+brew "devcontainer"
 # Utility for directing compilation
 brew "make"
 # A modern top replacement

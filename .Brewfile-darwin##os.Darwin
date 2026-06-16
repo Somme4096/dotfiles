@@ -15,6 +15,7 @@ cask "libreoffice"
 # cask "lm-studio"
 cask "neovide-app"
 cask "obsidian"
+cask "opencode-desktop"
 cask "tailscale-app"
 cask "zen"
 cask "zed"
@@ -26,6 +27,7 @@ cask "orbstack"
 cask "maccy"
 brew "paneru"
 cask "karabiner-elements" # keybinding manager
+cask "playcover-community"
 
 # Fonts
 cask "font-commit-mono-nerd-font"

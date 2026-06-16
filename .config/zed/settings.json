@@ -7,20 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": false,
+  "edit_predictions": {
+    "provider": "copilot",
+  },
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
-  },
-  "features": {
-    "edit_prediction_provider": "copilot",
+    "dock": "right",
   },
   "context_servers": {
     "Astro docs": {
@@ -33,6 +34,7 @@
     "metrics": false,
   },
   "agent": {
+    "sidebar_side": "right",
     "dock": "right",
     "profiles": {
       "edit": {
@@ -52,20 +54,39 @@
     },
     "model_parameters": [],
   },
+  "agent_servers": {
+    "OpenCode": {
+      "default_config_options": {
+        "effort": "high",
+        "mode": "plan",
+        "model": "openrouter/deepseek/deepseek-v4-flash",
+      },
+      "type": "custom",
+      "command": "opencode",
+      "args": ["acp"],
+    },
+  },
   "terminal": {
-    "font_family": "IosevkaTerm Nerd Font Propo",
+    "font_family": "CommitMono Nerd Font",
+    "env": {
+      "MISE_ENV": "1",
+    },
   },
   "use_smartcase_search": true,
   "vim_mode": true,
   "ui_font_family": "Noto Sans Mono CJK JP",
   "buffer_line_height": "comfortable",
   "buffer_font_family": ".ZedMono",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Ayu Dark",
+    "dark": "Carbonfox",
   },
 }

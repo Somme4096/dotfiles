@@ -7,45 +7,76 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
   "context_servers": {
     "Astro docs": {
-      "enabled": true,
-      "url": "hhttps://mcp.docs.astro.build/mcp"
-    }
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.docs.astro.build/mcp"],
+    },
   },
   "telemetry": {
     "diagnostics": true,
-    "metrics": false
+    "metrics": false,
   },
   "agent": {
+    "dock": "right",
     "profiles": {
       "edit": {
+        "default_model": {
+          "provider": "copilot_chat",
+          "model": "claude-sonnet-4",
+        },
         "name": "Edit",
         "tools": {},
         "enable_all_context_servers": false,
-        "context_servers": {}
-      }
+        "context_servers": {},
+      },
     },
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "gpt-5-mini",
     },
-    "model_parameters": []
+    "model_parameters": [],
+  },
+  "agent_servers": {
+    "OpenCode": {
+      "command": "opencode",
+      "args": ["acp"],
+    },
   },
   "terminal": {
-    "font_family": "Adwaita Mono"
+    "font_family": "CommitMono Nerd Font",
   },
   "use_smartcase_search": true,
   "vim_mode": true,
   "ui_font_family": "Noto Sans Mono CJK JP",
   "buffer_line_height": "comfortable",
   "buffer_font_family": ".ZedMono",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
   "theme": {
-    "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Kanagawa Dragon"
-  }
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Carbonfox",
+  },
 }
