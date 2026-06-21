@@ -3,11 +3,9 @@
 	name = Somme4096
 [pull]
 	rebase = true
-[url "git@github.com:"]
-    insteadOf = https://github.com/
 [credential "https://github.com"]
-	helper =
+	helper = 
 	helper = gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
+	helper = 
 	helper = gh auth git-credential

@@ -1,5 +1,6 @@
 switch (uname)
     case Linux
+        mise activate fish | source
         if test -d /home/linuxbrew/.linuxbrew # Linux
             set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
             set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
@@ -21,6 +22,9 @@ switch (uname)
         set -gx QT_IM_MODULE ibus
         set -gx XMODIFIERS @im=ibus
 end
+
+# Initialize docker to use podman socket in distrobox situation
+set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock
 
 # Init services
 starship init fish | source
