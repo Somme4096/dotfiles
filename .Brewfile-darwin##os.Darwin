@@ -21,6 +21,7 @@ cask "zen"
 cask "zed"
 # Pear Desktop — YouTube Music desktop client (replaces com.github.th_ch.youtube_music flatpak)
 cask "pear-devs/pear/pear-desktop"
+cask "super-productivity"
 
 # Mac GUI Applications (original)
 cask "orbstack"
@@ -28,6 +29,7 @@ cask "maccy"
 brew "paneru"
 cask "karabiner-elements" # keybinding manager
 cask "playcover-community"
+cask "iina"
 
 # Fonts
 cask "font-commit-mono-nerd-font"

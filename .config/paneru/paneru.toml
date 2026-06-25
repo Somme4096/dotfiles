@@ -3,8 +3,8 @@
 # See https://github.com/karinushka/paneru/blob/main/CONFIGURATION.md
 
 [options]
-focus_follows_mouse = true
-mouse_follows_focus = true
+focus_follows_mouse = false
+mouse_follows_focus = false
 animation_speed = 12
 
 [padding]

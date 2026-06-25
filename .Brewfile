@@ -4,6 +4,12 @@ brew "yadm"
 brew "gh"
 # Argon2 CLI (For password-has calculation)
 brew "argon2"
+# Aria 2 downloader
+brew "aria2"
+# CLI movie utility
+brew "ffmpeg"
+# Youtube Downloader
+brew "yt-dlp"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Next-gen compiler infrastructure
