@@ -1,6 +1,9 @@
 [user]
 	email = somme4096@gmail.com
 	name = Somme4096
+	signingkey = ~/.ssh/aria.pub
+[includeIf "gitdir:**/src/spark-os/**"]
+	path = ~/.gitconfig-work
 [pull]
 	rebase = true
 [credential "https://github.com"]
@@ -9,3 +12,8 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !gh auth git-credential
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
