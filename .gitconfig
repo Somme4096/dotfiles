@@ -1,7 +1,7 @@
 [user]
 	email = somme4096@gmail.com
 	name = Somme4096
-	signingkey = ~/.ssh/aria.pub
+	signingkey = ~/.ssh/id_ed25519.pub
 [includeIf "gitdir:**/src/spark-os/**"]
 	path = ~/.gitconfig-work
 [pull]
