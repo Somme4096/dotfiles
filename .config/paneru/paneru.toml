@@ -46,6 +46,12 @@ window_manage = "shift + ctrl - s"
 window_focus_first = "cmd + shift - 1"
 window_focus_last = "cmd + shift - 9"
 
-[windows.global_gaps]
+# [windows.global_gaps]
+# title = ".*"
+# horizontal_padding = 10
+
+[window.airi]
 title = ".*"
-horizontal_padding = 10
+bundle_id = "ai.moeru.airi"
+floating = true
+dont_focus = true
