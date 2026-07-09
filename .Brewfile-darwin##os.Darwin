@@ -19,7 +19,6 @@ cask "opencode-desktop"
 cask "tailscale-app"
 cask "zen"
 cask "zed"
-cask "super-productivity"
 
 # Mac GUI Applications (original)
 cask "orbstack"
@@ -28,6 +27,8 @@ brew "paneru"
 cask "karabiner-elements" # keybinding manager
 cask "playcover-community"
 cask "iina"
+cask "cherry-studio"
+cask "android-platform-tools"
 
 # Fonts
 cask "font-commit-mono-nerd-font"
