@@ -113,6 +113,7 @@ flatpak "org.prismlauncher.PrismLauncher"
 flatpak "org.upscayl.Upscayl"
 flatpak "org.videolan.VLC"
 flatpak "com.cherry_ai.CherryStudio"
+flatpak "com.super_productivity.SuperProductivity"
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)

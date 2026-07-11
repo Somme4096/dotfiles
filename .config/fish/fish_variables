@@ -3,3 +3,4 @@
 SETUVAR __fish_initialized:4300
 SETUVAR _tide_left_items:\x1d
 SETUVAR _tide_right_items:\x1d
+SETUVAR fish_user_paths:/var/home/somme/\x2elocal/share/pnpm/bin
