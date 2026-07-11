@@ -14,6 +14,5 @@
 	helper = !gh auth git-credential
 [gpg]
     format = ssh
-
 [commit]
     gpgsign = true
