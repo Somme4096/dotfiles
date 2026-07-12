@@ -51,7 +51,6 @@ os_specific_bundles = %w[
   Brewfile-darwin
   Brewfile-silverblue
   Brewfile-debian
-  Brewfile-linux
 ]
 
 os_specific_bundles.each do |bundle|
