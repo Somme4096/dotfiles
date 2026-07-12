@@ -47,13 +47,12 @@ brew "eza"
 # opencode
 brew "opencode"
 
-os_specific_bundles = %w[
-  Brewfile-darwin
-  Brewfile-silverblue
-  Brewfile-debian
-]
+mac_bundle = File.expand_path("~/.Brewfile-darwin")
+if File.exist?(mac_bundle)
+  instance_eval(File.read(mac_bundle), mac_bundle)
+end
 
-os_specific_bundles.each do |bundle|
-  path = File.expand_path("~/#{bundle}")
-  instance_eval(File.read(path), path) if File.exist?(path)
+fedora_bundle = File.expand_path("~/.Brewfile-fedora")
+if File.exist?(fedora_bundle)
+  instance_eval(File.read(fedora_bundle), fedora_bundle)
 end
