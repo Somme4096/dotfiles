@@ -56,3 +56,8 @@ fedora_bundle = File.expand_path("~/.Brewfile-fedora")
 if File.exist?(fedora_bundle)
   instance_eval(File.read(fedora_bundle), fedora_bundle)
 end
+
+debian_bundle = File.expand_path("~/.Brewfile-debian")
+if File.exist?(debian_bundle)
+  instance_eval(File.read(debian_bundle), debian_bundle)
+end
