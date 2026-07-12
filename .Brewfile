@@ -46,6 +46,8 @@ brew "bat"
 brew "eza"
 # opencode
 brew "opencode"
+# rtk-ai
+brew "rtk"
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
