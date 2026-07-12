@@ -47,80 +47,14 @@ brew "eza"
 # opencode
 brew "opencode"
 
-# flatpak
-flatpak "ai.lmstudio.lm-studio"
-flatpak "app.drey.EarTag"
-flatpak "app.drey.Warp"
-flatpak "app.zen_browser.zen"
-flatpak "com.axosoft.GitKraken"
-flatpak "com.bitwarden.desktop"
-flatpak "com.github.flxzt.rnote"
-flatpak "com.github.marhkb.Pods"
-flatpak "com.github.tchx84.Flatseal"
-flatpak "com.google.Chrome"
-flatpak "com.logseq.Logseq"
-flatpak "com.mattjakeman.ExtensionManager"
-flatpak "com.rafaelmardojai.SharePreview"
-flatpak "com.rafaelmardojai.WebfontKitGenerator"
-flatpak "com.valvesoftware.Steam"
-flatpak "de.haeckerfelix.Fragments", remote: "fedora-testing", url: "oci+https://registry.fedoraproject.org#testing"
-flatpak "dev.neovide.neovide"
-flatpak "dev.zed.Zed"
-flatpak "fr.handbrake.ghb"
-flatpak "info.febvre.Komikku"
-flatpak "io.github.Qalculate", remote: "fedora-testing", url: "oci+https://registry.fedoraproject.org#testing"
-flatpak "io.github.cleomenezesjr.Serigy"
-flatpak "io.github.getnf.embellish"
-flatpak "io.github.milkshiift.GoofCord"
-flatpak "io.github.realmazharhussain.GdmSettings"
-flatpak "io.github.swordpuffin.rewaita"
-flatpak "io.gitlab.adhami3310.Converter"
-flatpak "io.gitlab.adhami3310.Impression"
-flatpak "io.missioncenter.MissionCenter"
-flatpak "it.mijorus.gearlever"
-flatpak "md.obsidian.Obsidian"
-flatpak "moe.launcher.an-anime-game-launcher"
-flatpak "net.ankiweb.Anki"
-flatpak "nl.andreasknoben.Laser"
-flatpak "org.atheme.audacious"
-flatpak "org.audacityteam.Audacity", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.electronjs.Electron2.BaseApp"
-flatpak "org.gnome.Calendar", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.Characters", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.DejaDup"
-flatpak "org.gnome.Evince", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.Logs", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.Loupe"
-flatpak "org.gnome.NautilusPreviewer", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.Papers"
-flatpak "org.gnome.Shotwell"
-flatpak "org.gnome.Weather", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.baobab", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.clocks", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.font-viewer", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.gnome.gitlab.YaLTeR.VideoTrimmer"
-flatpak "org.gnome.gitlab.somas.Apostrophe"
-flatpak "com.github.th_ch.youtube_music"
-flatpak "org.inkscape.Inkscape"
-flatpak "org.kde.krita", remote: "fedora-testing", url: "oci+https://registry.fedoraproject.org#testing"
-flatpak "org.libreoffice.LibreOffice"
-flatpak "org.libvips.vipsdisp"
-flatpak "org.mozilla.thunderbird_esr"
-flatpak "org.musicbrainz.Picard", remote: "fedora", url: "oci+https://registry.fedoraproject.org"
-flatpak "org.nickvision.tubeconverter"
-flatpak "org.onlyoffice.desktopeditors"
-flatpak "org.prismlauncher.PrismLauncher"
-flatpak "org.upscayl.Upscayl"
-flatpak "org.videolan.VLC"
-flatpak "com.cherry_ai.CherryStudio"
-flatpak "com.super_productivity.SuperProductivity"
+os_specific_bundles = %w[
+  Brewfile-darwin
+  Brewfile-silverblue
+  Brewfile-debian
+  Brewfile-linux
+]
 
-mac_bundle = File.expand_path("~/.Brewfile-darwin")
-if File.exist?(mac_bundle)
-  instance_eval(File.read(mac_bundle), mac_bundle)
-end
-
-linux_bundle = File.expand_path("~/.Brewfile-linux")
-if File.exist?(linux_bundle)
-  instance_eval(File.read(linux_bundle), linux_bundle)
+os_specific_bundles.each do |bundle|
+  path = File.expand_path("~/#{bundle}")
+  instance_eval(File.read(path), path) if File.exist?(path)
 end

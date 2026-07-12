@@ -1,0 +1,5 @@
+# Debian-specific brew packages
+brew "trash-cli"
+brew "binutils"
+brew "podman-compose"
+brew "nmap"
