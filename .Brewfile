@@ -48,6 +48,8 @@ brew "eza"
 brew "opencode"
 # rtk-ai
 brew "rtk"
+# Terminal multiplexer for the AI era
+brew "herdr"
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
