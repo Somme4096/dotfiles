@@ -23,24 +23,24 @@ workspace_popup_status = true
 
 [bindings]
 # Focus navigation (WASD — migrated from PaperWM)
-window_focus_west = "ctrl - a"
-window_focus_east = "ctrl - d"
-window_virtual_north = "ctrl - w"
-window_virtual_south = "ctrl - s"
+window_focus_west = "alt - a"
+window_focus_east = "alt - d"
+window_virtual_north = "alt - w"
+window_virtual_south = "alt - s"
 
 # Swap/move windows (PaperWM: Super+Shift+WASD)
-window_swap_west = "ctrl + shift - a"
-window_swap_east = "ctrl + shift - d"
-window_swap_north = "ctrl + shift - w"
-window_swap_south = "ctrl + shift - s"
+window_swap_west = "alt + shift - a"
+window_swap_east = "alt + shift - d"
+window_swap_north = "alt + shift - w"
+window_swap_south = "alt + shift - s"
 
 # Window management
-window_center = "ctrl + cmd - c"
+window_center = "alt + cmd - c"
 window_resize = "alt - r"
-window_fullwidth = "ctrl - f"
+window_fullwidth = "alt - f"
 
 # Scratch layer toggle (PaperWM: Ctrl+Super+s)
-window_manage = "shift + ctrl - s"
+window_manage = "shift + alt - s"
 
 # Jump to ends of strip
 window_focus_first = "cmd + shift - 1"
