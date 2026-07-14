@@ -64,7 +64,7 @@ flatpak "org.prismlauncher.PrismLauncher"
 flatpak "org.upscayl.Upscayl"
 flatpak "org.videolan.VLC"
 flatpak "com.cherry_ai.CherryStudio"
-flatpak "com.super_productivity.SuperProductivity"
+flatpak "org.gnu.emacs"
 
 brew "trash-cli"
 brew "binutils"

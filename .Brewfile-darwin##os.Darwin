@@ -9,6 +9,7 @@ cask "aquaskk"
 cask "coteditor"
 cask "google-chrome"
 cask "ghostty"
+cask "emacs"
 cask "foobar2000"
 # cask "handbrake"
 cask "libreoffice"
@@ -33,3 +34,4 @@ cask "android-platform-tools"
 # Fonts
 cask "font-commit-mono-nerd-font"
 cask "font-iosevka-term-nerd-font"
+
