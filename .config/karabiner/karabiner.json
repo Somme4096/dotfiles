@@ -8,13 +8,13 @@
                         "description": "My Custom Linux-Style Shortcuts with Spotlight Fix",
                         "manipulators": [
                             {
-                                "description": "Tap Left Command for Mission Control, Hold for Normal Shortcuts",
+                                "description": "Tap Left Alt for Mission Control, Hold for Normal Shortcuts",
                                 "from": {
-                                    "key_code": "left_control",
+                                    "key_code": "left_alt",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
-                                "to": [{ "key_code": "left_control" }],
+                                "to": [{ "key_code": "left_alt" }],
                                 "to_if_alone": [
                                     {
                                         "key_code": "up_arrow",
@@ -24,10 +24,10 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Launch Ghostty via Command + Enter",
+                                "description": "Launch Ghostty via Alt + Enter",
                                 "from": {
                                     "key_code": "return_or_enter",
-                                    "modifiers": { "mandatory": ["left_control"] }
+                                    "modifiers": { "mandatory": ["left_alt"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Ghostty'" }],
                                 "type": "basic"
@@ -64,6 +64,15 @@
                     "ignore": false,
                     "ignore_vendor_events": true,
                     "treat_as_built_in_keyboard": true
+                },
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "left_option" }]
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
