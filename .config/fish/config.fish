@@ -24,7 +24,9 @@ switch (uname)
 end
 
 # Initialize docker to use podman socket in distrobox situation
-set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock
+if test (bash -c '. /etc/os-release && echo $ID') = fedora
+    set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sockend
+end
 
 # Init services
 starship init fish | source
