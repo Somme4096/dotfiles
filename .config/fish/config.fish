@@ -21,11 +21,14 @@ switch (uname)
         set -gx GTK_IM_MODULE ibus
         set -gx QT_IM_MODULE ibus
         set -gx XMODIFIERS @im=ibus
+    case Darwin
+        fish_add_path "/Users/somme/.local/bin"
 end
 
 # Initialize docker to use podman socket in distrobox situation
-if test (bash -c '. /etc/os-release && echo $ID') = fedora
-    set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sockend
+if test -f /etc/os-release
+    and test (bash -c '. /etc/os-release && echo $ID') = fedora
+    set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock
 end
 
 # Init services
