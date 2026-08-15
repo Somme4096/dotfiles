@@ -4,6 +4,8 @@
 	signingkey = ~/.ssh/id_ed25519.pub
 [includeIf "gitdir:**/src/spark-os/**"]
 	path = ~/.gitconfig-work
+[includeIf "gitdir:~/.nanobot/workspace/**"]
+	path = ~/.gitconfig-nanobot
 [pull]
 	rebase = true
 [credential "https://github.com"]
