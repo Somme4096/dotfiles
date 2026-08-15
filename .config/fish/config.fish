@@ -23,6 +23,7 @@ switch (uname)
         set -gx XMODIFIERS @im=ibus
     case Darwin
         fish_add_path "/Users/somme/.local/bin"
+        fish_add_path "$HOME/.dotnet/tools"
 end
 
 # Initialize docker to use podman socket in distrobox situation
