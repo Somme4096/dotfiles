@@ -1,6 +1,5 @@
 switch (uname)
     case Linux
-        mise activate fish | source
         if test -d /home/linuxbrew/.linuxbrew # Linux
             set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
             set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
@@ -21,6 +20,7 @@ switch (uname)
         set -gx GTK_IM_MODULE ibus
         set -gx QT_IM_MODULE ibus
         set -gx XMODIFIERS @im=ibus
+        mise activate fish | source
     case Darwin
         fish_add_path "/Users/somme/.local/bin"
         fish_add_path "$HOME/.dotnet/tools"
