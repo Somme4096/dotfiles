@@ -14,7 +14,7 @@
 
 ;; ── Frame / UI ────────────────────────────────────────────────────
 (set-face-attribute 'default nil
-                    :height 140 :weight 'light :family "CommitMono Nerd Font")
+                    :height 130 :weight 'light :family "CommitMono Nerd Font")
 (set-face-attribute 'bold nil :weight 'regular)
 (set-face-attribute 'bold-italic nil :weight 'regular)
 (setq standard-display-table (or standard-display-table (make-display-table)))
