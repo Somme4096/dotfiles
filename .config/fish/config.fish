@@ -11,6 +11,8 @@ switch (uname)
         end
         fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
 
+        set -gx CC (brew --prefix gcc)/bin/gcc-16
+
         ! set -q MANPATH; and set MANPATH ''
         set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH
 
