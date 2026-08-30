@@ -2,6 +2,10 @@
 # brew "mas"
 # Friendly Interactive SHell (installed by rpm-ostree on Silverblue)
 brew "fish"
+brew "magic-wormhole"
+brew "mole"
+brew "socktainer"
+brew "syncthing"
 
 # Mac GUI applications (Homebrew Cask): Inhereted from Silverblue
 # cask "anki"
@@ -9,28 +13,26 @@ brew "fish"
 cask "google-chrome"
 cask "ghostty"
 cask "emacs"
-cask "foobar2000"
 # cask "handbrake"
 # cask "lm-studio"
 cask "neovide-app"
 cask "obsidian"
-cask "opencode-desktop"
 cask "tailscale-app"
 cask "zen"
 cask "zed"
-cask "unity-hub"
+
 
 # Mac GUI Applications (original)
-cask "orbstack"
 cask "maccy"
 brew "paneru"
 cask "karabiner-elements" # keybinding manager
 cask "playcover-community"
-cask "cherry-studio"
+# cask "cherry-studio"
 cask "android-platform-tools"
 cask "affinity"
+cask "blender"
+cask "wouterdebie/tap/davit"
 
 # Fonts
 cask "font-commit-mono-nerd-font"
 cask "font-iosevka-term-nerd-font"
-
