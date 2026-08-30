@@ -1,4 +1,8 @@
 {
+    "global": {
+        "enable_notification_window": false,
+        "show_in_menu_bar": false
+    },
     "machine_specific": { "krbn-4ebaa42e-401c-4fcd-ab80-765fb0b034d1": { "external_editor_path": "/Applications/CotEditor.app" } },
     "profiles": [
         {
