@@ -12,7 +12,7 @@ brew "syncthing"
 # cask "coteditor"
 cask "google-chrome"
 cask "ghostty"
-cask "emacs"
+cask "emacs-app"
 # cask "handbrake"
 # cask "lm-studio"
 cask "neovide-app"
@@ -23,7 +23,8 @@ cask "zed"
 
 
 # Mac GUI Applications (original)
-cask "maccy"
+# cask "maccy"
+cask "cog-app"
 brew "paneru"
 cask "karabiner-elements" # keybinding manager
 cask "playcover-community"
