@@ -2,4 +2,4 @@
 brew "trash-cli"
 brew "binutils"
 brew "nmap"
-brew "helm"
+brew "podlet"
