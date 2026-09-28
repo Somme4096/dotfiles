@@ -16,11 +16,14 @@ cask "emacs-app"
 cask "chatgpt"
 # cask "handbrake"
 # cask "lm-studio"
-cask "neovide-app"
+cask "bitwarden"
 cask "obsidian"
 cask "tailscale-app"
 cask "zen"
 cask "zed"
+cask "libreoffice"
+cask "handy"
+cask "unsloth"
 
 
 # Mac GUI Applications (original)
