@@ -45,11 +45,13 @@ brew "bat"
 # Modern replacement for ls
 brew "eza"
 # opencode
-brew "opencode"
+brew "anomalyco/tap/opencode-v2"
 # rtk-ai
 brew "rtk"
 # Terminal multiplexer for the AI era
 brew "herdr"
+# GCC
+brew "gcc"
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
