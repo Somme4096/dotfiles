@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "preset": "openai",
+  "preset": "opencode-go",
   "presets": {
     "openai": {
       "orchestrator": {
@@ -64,14 +64,13 @@
       },
       "oracle": {
         "model": "opencode-go/qwen3.7-max",
-        "variant": "max",
         "skills": [
           "simplify"
         ],
         "mcps": []
       },
       "librarian": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode-go/deepseek-v4.1-flash",
         "skills": [],
         "mcps": [
           "websearch",
@@ -80,7 +79,7 @@
         ]
       },
       "explorer": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode-go/deepseek-v4.1-flash",
         "skills": [],
         "mcps": []
       },
@@ -91,7 +90,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode-go/deepseek-v4.1-flash",
         "variant": "high",
         "skills": [],
         "mcps": []
