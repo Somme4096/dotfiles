@@ -1,5 +1,6 @@
 [tools]
 bun = "latest"
+"github:shibadogcap/dpgk" = "latest"
 node = "latest"
 "npm:@graphlab-fr/cosma" = "latest"
 pnpm = "latest"
