@@ -13,17 +13,14 @@ brew "syncthing"
 cask "google-chrome"
 cask "ghostty"
 cask "emacs-app"
-cask "chatgpt"
 # cask "handbrake"
 # cask "lm-studio"
-cask "bitwarden"
 cask "obsidian"
 cask "tailscale-app"
 cask "zen"
 cask "zed"
 cask "libreoffice"
 cask "handy"
-cask "unsloth"
 
 
 # Mac GUI Applications (original)
