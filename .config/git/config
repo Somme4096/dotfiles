@@ -5,7 +5,7 @@
 [includeIf "gitdir:**/src/spark-os/**"]
 	path = ~/.gitconfig-work
 [includeIf "gitdir:~/.nanobot/workspace/**"]
-	path = ~/.gitconfig-nanobot
+	path = ~/.config/git/config-nanobot
 [pull]
 	rebase = true
 [credential "https://github.com"]
