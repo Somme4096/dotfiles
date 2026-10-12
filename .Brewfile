@@ -52,6 +52,8 @@ brew "rtk"
 brew "herdr"
 # GCC
 brew "gcc"
+# Claude Code
+cask "claude-code"
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
