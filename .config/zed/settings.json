@@ -7,6 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ssh_connections": [
+    {
+      "host": "100.117.197.87",
+      "username": "birchtree",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/birchtree/src/dusha"
+          ]
+        }
+      ]
+    }
+  ],
   "disable_ai": false,
   "edit_predictions": {
     "provider": "copilot",
