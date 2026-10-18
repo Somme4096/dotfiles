@@ -1,0 +1,3 @@
+# Files and globs encrypted into ~/.local/share/yadm/archive via `yadm encrypt`
+.secrets/*
+.config/opencode/service.json

@@ -4,7 +4,8 @@
     "name": "carbonfox"
   },
   "plugins": [
-    "oh-my-opencode-slim"
+    "oh-my-opencode-slim",
+    "./herdr-opencode"
   ],
   "diffs": {
     "wrap": "word"

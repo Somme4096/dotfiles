@@ -1,17 +1,95 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "oh-my-opencode-slim",
-    "/var/home/somme/.config/opencode/vendor/i-have-adhd/.opencode/plugins/i-have-adhd.mjs"
-  ],
-  "agent": {
-    "explore": {
-      "disable": true
-    },
-    "general": {
-      "disable": true
+  "plugins": ["oh-my-opencode-slim"],
+  "shell": "/usr/bin/fish",
+  "mcp": {
+    "servers": {
+      "ntu-cool": {
+        "type": "local",
+        "command": ["/Users/somme/.cargo/bin/cool", "mcp"],
+        "disabled": true
+      },
+      "plan": {
+        "type": "remote",
+        "url": "https://api-itsaplan.liu-sean-me.uk/mcp",
+        "oauth": false,
+        "headers": {
+          "Authorization": "Bearer {file:~/.secrets/itsaplan-token}"
+        }
+      },
+      "headroom": {
+        "type": "local",
+        "command": ["/Users/somme/.local/bin/headroom", "mcp", "serve"]
+      },
+      "serena": {
+        "type": "local",
+        "command": [
+          "uvx",
+          "--from",
+          "git+https://github.com/oraios/serena",
+          "serena",
+          "start-mcp-server",
+          "--project-from-cwd",
+          "--context",
+          "agent",
+          "--open-web-dashboard",
+          "False"
+        ]
+      }
     }
   },
-  "lsp": true,
-  "shell": "/usr/bin/fish"
+  "providers": {
+    "headroom": {
+      "name": "Headroom Proxy",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8787/v1"
+      },
+      "models": {
+        "claude-sonnet-4-6": {
+          "name": "Claude Sonnet 4.6",
+          "limit": {
+            "context": 200000,
+            "output": 16384
+          }
+        },
+        "claude-opus-4-6": {
+          "name": "Claude Opus 4.6",
+          "limit": {
+            "context": 200000,
+            "output": 16384
+          }
+        },
+        "claude-haiku-4-5-20251001": {
+          "name": "Claude Haiku 4.5",
+          "limit": {
+            "context": 200000,
+            "output": 8192
+          }
+        },
+        "gpt-4o": {
+          "name": "GPT-4o",
+          "limit": {
+            "context": 128000,
+            "output": 16384
+          }
+        },
+        "gpt-4.1": {
+          "name": "GPT-4.1",
+          "limit": {
+            "context": 1048576,
+            "output": 32768
+          }
+        }
+      }
+    }
+  },
+  "agents": {
+    "explore": {
+      "disabled": true
+    },
+    "general": {
+      "disabled": true
+    }
+  }
 }
