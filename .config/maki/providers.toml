@@ -1,5 +1,5 @@
 [sophia-opencode-go]
-display_name = "Dusha (muse responses fallback)"
+display_name = "Sophia (Opencode Go)"
 protocol = "openai-responses"
 base_url = "http://127.0.0.1:8766/opencode-go"
 api_key = "dummy"
@@ -14,12 +14,12 @@ max_output_tokens = 32768
 
 [[sophia-opencode-go.models]]
 id = "deepseek-v4.1-flash"
-tier = "weak"
+tier = "medium"
 context_window = 1048576
 max_output_tokens = 393216
 
 [sophia-polystrata]
-display_name = "Dusha (polystrata primary)"
+display_name = "Sophia (Polystrata)"
 protocol = "openai"
 base_url = "http://127.0.0.1:8766/polystrata"
 api_key = "dummy"
