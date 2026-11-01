@@ -1,0 +1,9 @@
+[bash]
+allow = [
+    "git *",
+    "ls *",
+    "head *",
+    "cd *",
+    "cat *",
+    "echo *",
+]

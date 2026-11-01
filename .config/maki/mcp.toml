@@ -1,0 +1,8 @@
+[mcp.dusha]
+url = "http://127.0.0.1:8765/mcp"
+headers = { X-Companion-Token = "${DUSHA_TOKEN}" }
+
+[mcp.donsetch]
+command = ["donsetch", "mcp"]
+timeout = 10000
+enabled = true
