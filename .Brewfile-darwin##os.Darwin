@@ -6,6 +6,8 @@ brew "magic-wormhole"
 brew "mole"
 brew "socktainer"
 brew "syncthing"
+brew "razvandimescu/tap/numa", trusted: true
+brew "agent-browser"
 
 # Mac GUI applications (Homebrew Cask): Inhereted from Silverblue
 # cask "anki"
@@ -21,7 +23,7 @@ cask "zen"
 cask "zed"
 cask "libreoffice"
 cask "handy"
-
+cask "kero"
 
 # Mac GUI Applications (original)
 # cask "maccy"

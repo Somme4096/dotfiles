@@ -49,9 +49,3 @@ window_focus_last = "cmd + shift - 9"
 # [windows.global_gaps]
 # title = ".*"
 # horizontal_padding = 10
-
-[window.airi]
-title = ".*"
-bundle_id = "ai.moeru.airi"
-floating = true
-dont_focus = true

@@ -10,6 +10,12 @@ brew "aria2"
 brew "ffmpeg"
 # Youtube Downloader
 brew "yt-dlp"
+# PDF text extraction and rendering (pdftotext, pdftoppm)
+brew "poppler"
+# OCR engine for scanned PDFs
+brew "tesseract"
+# HTML to Markdown for source captures
+brew "yusukebe/tap/ax", trusted: true
 # Simple terminal UI for git commands
 brew "lazygit"
 # Next-gen compiler infrastructure
@@ -45,7 +51,7 @@ brew "bat"
 # Modern replacement for ls
 brew "eza"
 # opencode
-brew "anomalyco/tap/opencode-v2"
+brew "anomalyco/tap/opencode-v2", trusted: true
 # rtk-ai
 brew "rtk"
 # Terminal multiplexer for the AI era
