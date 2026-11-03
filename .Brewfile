@@ -60,6 +60,8 @@ brew "herdr"
 brew "gcc"
 # Claude Code
 cask "claude-code"
+# agent-browser
+brew "agent-browser"
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
