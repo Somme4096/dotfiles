@@ -1,8 +1,10 @@
 [tools]
 bun = "latest"
+"github:sahenjp/RustXNG" = "0.26.0"
 "github:shibadogcap/dpgk" = "latest"
 node = "latest"
 "npm:@graphlab-fr/cosma" = "latest"
+"npm:agent-browser" = "latest"
 pnpm = "latest"
 python = "latest"
 rust = "latest"
