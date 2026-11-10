@@ -1,6 +1,10 @@
 #!/bin/bash
 
-maki "Sync yadm to/from remote under 30 seconds. Use $(yadm) command. Resolve conflicts only by newest. Commit semantically, push." --yolo $argv
+if [ -n "$(yadm status --porcelain)" ]; then
+  maki "Sync yadm to/from remote under 30 seconds. Use $(yadm) command. Resolve conflicts only by newest. Commit semantically, push." --yolo $argv
+else
+  echo "yadm tree clean. Skipping maki sync."
+fi
 
 OS_TYPE="$(uname)"
 
