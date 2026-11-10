@@ -1,5 +1,7 @@
 #!/bin/bash
 
+maki "Sync yadm to/from remote under 30 seconds. Use $(yadm) command. Resolve conflicts only by newest. Commit semantically, push." --yolo $argv
+
 OS_TYPE="$(uname)"
 
 if [ "$OS_TYPE" = "Darwin" ]; then
