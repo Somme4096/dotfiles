@@ -1,5 +1,6 @@
 [sophia-mistral]
 display_name = "Custom (sophia-mistral)"
+plan = "coding"
 protocol = "openai"
 base_url = "http://127.0.0.1:8766/mistral"
 api_key_env = "SOPHIA_MISTRAL_API_KEY"
