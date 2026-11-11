@@ -1,11 +1,8 @@
 # flatpak
-flatpak "ai.lmstudio.lm-studio"
 flatpak "app.drey.EarTag"
 flatpak "app.drey.Warp"
 flatpak "app.zen_browser.zen"
-flatpak "com.axosoft.GitKraken"
 flatpak "com.github.flxzt.rnote"
-flatpak "com.github.marhkb.Pods"
 flatpak "com.github.tchx84.Flatseal"
 flatpak "com.google.Chrome"
 flatpak "com.mattjakeman.ExtensionManager"
