@@ -2,7 +2,8 @@
 display_name = "Sophia (Opencode Go)"
 protocol = "openai-responses"
 base_url = "http://127.0.0.1:8766/opencode-go"
-api_key = "dummy"
+api_key = "127001"
+headers = { X-Conversation-Id = "${DUSHA_CONVERSATION_ID}", X-Companion-Route = "${DUSHA_ROUTE}", X-Harness = "${DUSHA_HARNESS}" }
 default_model = "sophia-polystrata/gemma-4-26b-a4b"
 
 [[sophia-opencode-go.models]]
