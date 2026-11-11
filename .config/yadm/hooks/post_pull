@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [ -n "$(git --git-dir="$HOME/.local/share/yadm/repo.git" ls-files --unmerged)" ]; then
+REPO="$HOME/.local/share/yadm/repo.git"
+if [ -n "$(git --git-dir="$REPO" ls-files --unmerged)" ] || [ -n "$(git --git-dir="$REPO" status --porcelain)" ]; then
   maki "Sync yadm to/from remote under 30 seconds. Use $(yadm) command. Resolve conflicts only by newest. Commit semantically, push." --yolo $argv
 else
-  echo "Pull merged cleanly. Skipping maki sync."
+  echo "Pull merged cleanly and tree is clean. Skipping maki sync."
 fi
 
 OS_TYPE="$(uname)"
