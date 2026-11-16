@@ -7,7 +7,12 @@ command = ["donsetch", "mcp"]
 timeout = 10000
 enabled = true
 
-[mcp.agent-browser]
-command = ["/home/birchtree/.local/share/mise/shims/agent-browser", "mcp"]
+[mcp.browse]
+command = ["/Users/somme/.local/bin/browse", "mcp"]
 timeout = 60000
 enabled = true
+
+# [mcp.agent-browser]
+# command = ["/home/birchtree/.local/share/mise/shims/agent-browser", "mcp"]
+# timeout = 60000
+# enabled = true
