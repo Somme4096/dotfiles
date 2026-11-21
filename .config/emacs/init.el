@@ -7,9 +7,8 @@
       '(("melpa" . "https://melpa.org/packages/")
         ("gnu"   . "https://elpa.gnu.org/packages/")))
 (package-initialize)
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+(unless (file-directory-p (expand-file-name "archives" package-user-dir))
+  (package-refresh-contents))
 (require 'use-package)
 
 ;; ── Frame / UI ────────────────────────────────────────────────────
@@ -93,11 +92,13 @@
   (interactive)
   (let ((default-directory (expand-file-name "~/Documents/org/"))
         (buf (get-buffer-create "*org-pull*")))
-    (with-current-buffer buf (erase-buffer))
-    (set-process-sentinel
-     (start-process "org-pull" buf "git" "pull" "--rebase")
-     (lambda (_p event)
-       (message "org pull: %s" (string-trim event))))))
+    (if (not (file-directory-p default-directory))
+        (message "org pull skipped: %s does not exist" default-directory)
+      (with-current-buffer buf (erase-buffer))
+      (set-process-sentinel
+       (start-process "org-pull" buf "git" "pull" "--rebase")
+       (lambda (_p event)
+         (message "org pull: %s" (string-trim event)))))))
 
 ;; ── Global bindings ──────────────────────────────────────────────
 (bind-key "C-x k"   #'kill-current-buffer)
@@ -108,7 +109,8 @@
 (bind-key "C-z"     nil)
 (bind-key "<C-wheel-up>"   nil)
 (bind-key "<C-wheel-down>" nil)
-(cd "~/Documents/org/")
+(when (file-directory-p "~/Documents/org/")
+  (cd "~/Documents/org/"))
 (recentf-mode 1)
 (when (eq system-type 'darwin)
   (select-frame-set-input-focus (selected-frame))
@@ -304,7 +306,8 @@
      (message "%s: %s" title body))))
 
 (defun my/org-agenda-to-appt-refresh (&rest _args)
-  (org-agenda-to-appt t))
+  (when (file-directory-p (if (boundp 'org-directory) org-directory "~/Documents/org"))
+    (org-agenda-to-appt t)))
 
 (setq appt-message-warning-time 60)
 (setq appt-display-interval 1)
@@ -313,7 +316,8 @@
         (my/notify (format "In %s minutes" remaining) msg)))
 (advice-add 'appt-check :before #'my/org-agenda-to-appt-refresh)
 (appt-activate t)
-(org-agenda-to-appt t)
+(when (file-directory-p (if (boundp 'org-directory) org-directory "~/Documents/org"))
+  (org-agenda-to-appt t))
 
 ;; ── Startup benchmark ────────────────────────────────────────────
 (let ((init-time (float-time (time-subtract (current-time) init-start-time)))
