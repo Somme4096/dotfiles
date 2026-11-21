@@ -17,6 +17,11 @@ base_url = "http://127.0.0.1:8766/mistral"
 api_key_env = "SOPHIA_MISTRAL_API_KEY"
 discover_models = true
 
+[sophia-mistral.headers]
+X-Companion-Route = "${DUSHA_ROUTE}"
+X-Conversation-Id = "${DUSHA_CONVERSATION_ID}"
+X-Harness = "${DUSHA_HARNESS}"
+
 [sophia-opencode-go]
 display_name = "Sophia (Opencode Go)"
 protocol = "openai-responses"
