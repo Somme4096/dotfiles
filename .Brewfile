@@ -63,7 +63,7 @@ brew "agent-browser"
 # agy
 cask "antigravity-cli"
 # donsetch
-brew "dondai44423/tap/donsetch", trusted: true
+# brew "dondai44423/tap/donsetch", trusted: true
 
 mac_bundle = File.expand_path("~/.Brewfile-darwin")
 if File.exist?(mac_bundle)
