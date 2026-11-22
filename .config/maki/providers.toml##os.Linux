@@ -22,6 +22,13 @@ tier = "medium"
 context_window = 1048576
 max_output_tokens = 393216
 
+[llama-cpp]
+display_name = "Custom (llama-cpp)"
+protocol = "openai"
+base_url = "http://127.0.0.1:8001"
+api_key = "dummy"
+discover_models = true
+
 [sophia-polystrata]
 display_name = "Sophia (Polystrata)"
 protocol = "openai"
