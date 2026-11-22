@@ -33,6 +33,8 @@ function llama --description "Manage llama-server model + service"
                 echo qwen35-27b-iq4
             case 'Swift-1.5-Qwen3.8-27B-GSQ-RCO-IQ2_XS-mtp'
                 echo swift-iq2
+            case 'Inkling-2-Mini-IQ4_NL'
+                echo inkling-2-mini
             case '*'
                 # fallback: lower-case the basename, drop version-ish bits
                 string lower "$base" | string replace -ra '[-_][0-9].*$' ''
@@ -71,6 +73,10 @@ function llama --description "Manage llama-server model + service"
                 echo 65536
                 echo 1024
                 echo 512
+            case inkling-2-mini
+                echo 65536
+                echo 512
+                echo 64
             case qwen35-27b-iq4
                 echo 16384
                 echo 512
@@ -104,6 +110,8 @@ function llama --description "Manage llama-server model + service"
         switch "$alias"
             case gemma4-26b-a4b
                 set path "$HOME/models/mmproj-gemma-4-26B-A4B-it-qat-heretic-F16.gguf"
+            case inkling-2-mini
+                set path "$HOME/models/mmproj-Inkling-2-Mini-BF16.gguf"
             case '*'
                 return
         end
